@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(177, 177, 177);
+  font-family: Oswald, sans-serif;
+  overflow: hidden;
+}
+
+.top-bar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  padding-left: 15px;
+  background-color: grey;
+}
+
+/* Font Awesome Icons */
+.fas,
+.far {
+  position: relative;
+  width: 40px;
+  top: 5px;
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(82, 82, 82);
+}
+
+.fas:hover,
+.far:hover {
+  filter: brightness(90%);
+}
+
+.fa-fill-drip {
+  cursor: default;
+}
+
+.fa-undo-alt:hover,
+.fa-trash-alt:hover {
+  color: rgb(233, 37, 37);
+}
+
+/* Tools */
+.active-tool {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+}
+
+.active-tool > span {
+  padding: 2.5px 16px;
+  font-size: 20px;
+  user-select: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(82, 82, 82);
+}
+
+.tool {
+  position: relative;
+  top: 3px;
+}
+
+.tool {
+  margin-left: 8px;
+}
+
+.brush {
+  height: 44px;
+  width: 345px;
+  background-color: bre;
+}
+
+.brush > * {
+  margin-left: 10px;
+}
+
+.size {
+  position: absolute;
+  top: 5px;
+  left: 174px;
+  min-width: 40px;
+  height: 35px;
+  padding: 2.5px 8px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  user-select: none;
+  color: white;
+  background-color: rgb(82, 82, 82);
+}
+
+/* Custom Slider */
+.slider {
+  -webkit-appearance: none;
+  position: absolute;
+  top: 16px;
+  left: 225px;
+  width: 100px;
+  height: 10px;
+  border-radius: 2.5px;
+  outline: none;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  background-color: rgb(223, 216, 216);
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 2.5px;
+  background-color: rgb(47, 47, 47);
+}
+
+/* JS Color */
+.jscolor {
+  height: 35px;
+  width: 120px;
+  margin-left: 3px;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Canvas */
+canvas#canvas {
+  background-color: rgb(177, 177, 177);
+  position: absolute;
+  top: 50px;
+  cursor: crosshair;
+  z-index: 10;
+}
+
+/* Mobile Message */
+.mobile-message {
+  display: none;
+}
+
+/* Media Query: Mobile Devices */
+@media screen and (max-width: 800px) {
+  .mobile-message {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    z-index: 100;
+  }
+}
